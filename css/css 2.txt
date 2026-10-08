@@ -1,0 +1,218 @@
+/* theme.css - save in src/assets/ and import it in main.js */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;800&display=swap');
+
+:root {
+  --ink: #070b16;
+  --panel: #0e1629;
+  --line: rgba(148, 163, 184, 0.16);
+  --blue: #3b82f6;
+  --cyan: #22d3ee;
+  --text: #cbd5e1;
+  --heading: #f1f5f9;
+  --muted: #8c9bb5;
+}
+
+/* ---------- Page ---------- */
+html body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background-color: var(--ink);
+  background-image:
+    radial-gradient(900px 500px at 8% -5%, rgba(37, 99, 235, 0.28), transparent 60%),
+    radial-gradient(700px 500px at 100% 100%, rgba(34, 211, 238, 0.12), transparent 60%);
+  background-attachment: fixed;
+}
+
+#app h1,
+#app h2,
+#app h3,
+#app h4,
+#app h5,
+#app h6 {
+  font-family: 'Sora', sans-serif;
+  color: var(--heading);
+}
+
+#app .text-muted {
+  color: var(--muted) !important;
+}
+#app .text-primary {
+  color: #60a5fa !important;
+}
+
+/* ---------- Navbar ---------- */
+#app .navbar.bg-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(7, 11, 22, 0.75) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none !important;
+}
+
+#app .navbar-brand {
+  font-family: 'Sora', sans-serif;
+  background: linear-gradient(90deg, #93c5fd, var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 0;
+}
+
+#app .navbar .nav-link {
+  color: rgba(226, 232, 240, 0.7);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border-bottom: 0;
+}
+#app .navbar .nav-link:hover {
+  color: #fff;
+}
+/* active page = blue pill */
+#app .navbar .nav-link.router-link-exact-active {
+  color: #fff !important;
+  background: rgba(59, 130, 246, 0.28);
+  border-bottom: 0;
+}
+
+/* ---------- Cards and banners ---------- */
+#app .card {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line) !important;
+  border-radius: 16px;
+  box-shadow: none !important;
+}
+#app .card:hover {
+  border-color: rgba(96, 165, 250, 0.55) !important;
+  box-shadow: 0 18px 40px -12px rgba(37, 99, 235, 0.45) !important;
+}
+
+#app .bg-light,
+#app .bg-white {
+  background: var(--panel) !important;
+}
+#app .border-bottom {
+  border-color: var(--line) !important;
+}
+#app .list-group-item {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+/* Blog banner */
+#app .jumbotron.bg-light {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), var(--panel)) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 20px;
+}
+/* About banner */
+#app .jumbotron.bg-primary {
+  background: linear-gradient(120deg, #1d4ed8, #0ea5e9) !important;
+  border-radius: 20px;
+}
+
+/* Gallery tiles */
+#app .gallery-image-wrapper {
+  background: radial-gradient(circle at 30% 20%, #1e3a6e, #0b1426 70%) !important;
+}
+
+/* ---------- Buttons, badges, alerts ---------- */
+#app .btn-primary {
+  background: linear-gradient(135deg, #2563eb, var(--blue));
+  border: 0;
+}
+#app .btn-outline-secondary {
+  color: #9fb0cc;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+#app .btn-outline-secondary:hover {
+  color: #fff;
+  background: rgba(148, 163, 184, 0.16);
+}
+
+#app .badge-info {
+  background: rgba(251, 191, 36, 0.14);
+  color: #fbbf24;
+}
+#app .badge-secondary,
+#app .badge-primary {
+  background: rgba(59, 130, 246, 0.25);
+  color: #bfdbfe;
+}
+#app .badge-success {
+  background: rgba(52, 211, 153, 0.18);
+  color: #6ee7b7;
+}
+
+#app .alert-info {
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: #a5f3fc;
+}
+#app .alert-success {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #86efac;
+}
+
+/* ---------- Form ---------- */
+#app .form-control,
+#app .form-control:focus {
+  background: #0a1122;
+  color: var(--heading);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+#app .form-control:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.28);
+}
+#app select.form-control option {
+  background: #0a1122;
+}
+
+/* ---------- Footer ---------- */
+#app footer {
+  border-top: 1px solid var(--line) !important;
+}
+
+/* ---------- Home hero ---------- */
+#app .home {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: linear-gradient(160deg, rgba(37, 99, 235, 0.22), rgba(8, 13, 28, 0.9) 55%), var(--panel);
+}
+#app .home > * {
+  position: relative;
+  z-index: 1;
+}
+/* glowing blob that slowly drifts */
+#app .home::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.35), transparent 65%);
+  filter: blur(30px);
+  animation: drift 14s ease-in-out infinite alternate;
+}
+@keyframes drift {
+  to {
+    transform: translate(-25%, 20%) scale(1.25);
+  }
+}
+#app .home h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff 20%, #93c5fd 60%, var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
